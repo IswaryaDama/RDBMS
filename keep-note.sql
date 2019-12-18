@@ -40,8 +40,7 @@ reminder_id int(5));
 create table UserNote(
 usernote_id int(5),
 user_id varchar(5),
-note_id int(5),
-foreign key(user_id) references User(user_id));
+note_id int(5));
 
 
 
@@ -101,6 +100,7 @@ insert into Note values(006,'MySQL','Database query language','completed','2019-
 insert into UserNote values(1017,'001',006); 
 insert into NoteCategory values(1005,006,003);
 Alter table UserNote add constraint usernote_fk foreign key(note_id) references Note(note_id) on update cascade on delete cascade;
+Alter table UserNote add constraint usernote_userid_fk foreign key(user_id) references User(user_id) on update cascade on delete cascade;
 
 delete n from Note n join UserNote un on n.note_id = un.note_id where un.user_id='002';
 alter table NoteCategory add constraint notecategory_fk foreign key(category_id) references Category(category_id) on update cascade on delete cascade;
