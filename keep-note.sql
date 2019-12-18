@@ -1,7 +1,7 @@
 create table User(
 user_id varchar(5) primary key,
 user_name varchar(30),
-user_added_date date,
+user_added_date datetime,
 user_password varchar(15),
 user_mobile varchar(10));
 
@@ -24,7 +24,7 @@ reminder_id int(5) primary key,
 reminder_name varchar(30),
 reminder_descr varchar(50),
 reminder_type varchar(15),
-reminder_creation_date date,
+reminder_creation_date datetime,
 reminder_creator varchar(15));
 
 create table NoteCategory(
@@ -40,7 +40,8 @@ reminder_id int(5));
 create table UserNote(
 usernote_id int(5),
 user_id varchar(5),
-note_id int(5));
+note_id int(5)
+foreign key(user_id) references User(user_id) on update cascade on delete cascade);
 
 
 
@@ -100,7 +101,7 @@ insert into Note values(006,'MySQL','Database query language','completed','2019-
 insert into UserNote values(1017,'001',006); 
 insert into NoteCategory values(1005,006,003);
 Alter table UserNote add constraint usernote_fk foreign key(note_id) references Note(note_id) on update cascade on delete cascade;
-Alter table UserNote add foreign key(user_id) references User(user_id) on update cascade on delete cascade;
+
 delete n from Note n join UserNote un on n.note_id = un.note_id where un.user_id='002';
 alter table NoteCategory add constraint notecategory_fk foreign key(category_id) references Category(category_id) on update cascade on delete cascade;
 
