@@ -10,7 +10,7 @@ note_id int(5) primary key,
 note_title varchar(30),
 note_content varchar(50),
 note_status varchar(15),
-note_cretion_date date);
+note_creation_date date);
 
 create table Category(
 category_id int(5) primary key,
