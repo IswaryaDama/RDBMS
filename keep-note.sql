@@ -41,7 +41,7 @@ create table UserNote(
 usernote_id int(5),
 user_id varchar(5),
 note_id int(5),
-foreign key(user_id) references User(user_id) on update cascade on delete cascade);
+foreign key(user_id) references User(user_id));
 
 
 
