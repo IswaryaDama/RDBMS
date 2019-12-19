@@ -39,7 +39,7 @@ reminder_id int(5));
 
 create table UserNote(
 usernote_id int(5),
-user_id varchar(5),
+user_id varchar(5) NOT NULL,
 note_id int(5));
 
 
