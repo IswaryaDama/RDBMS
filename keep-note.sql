@@ -14,7 +14,7 @@ note_creation_date datetime);
 
 create table Category(
 category_id int(5) primary key,
-category_name varchar(30),
+category_name varchar(30) NOT NULL,
 category_descr varchar(50),
 category_creation_date datetime,
 category_creator varchar(15) NOT NULL);
