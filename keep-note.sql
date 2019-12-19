@@ -1,16 +1,16 @@
 create table User(
 user_id varchar(5) primary key,
-user_name varchar(30),
-user_added_date datetime,
-user_password varchar(15),
-user_mobile varchar(10));
+user_name varchar(30) NOT NULL,
+user_added_date datetime NOT NULL,
+user_password varchar(15) NOT NULL,
+user_mobile varchar(10) NOT NULL);
 
 create table Note(
 note_id int(5) primary key,
-note_title varchar(30),
-note_content varchar(50),
-note_status varchar(15),
-note_creation_date datetime);
+note_title varchar(30) NOT NULL,
+note_content varchar(50) NOT NULL,
+note_status varchar(15) NOT NULL,
+note_creation_date datetime NOT NULL);
 
 create table Category(
 category_id int(5) primary key,
