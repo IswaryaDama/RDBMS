@@ -16,26 +16,26 @@ create table Category(
 category_id int(5) primary key,
 category_name varchar(30) NOT NULL,
 category_descr varchar(50),
-category_creation_date datetime,
+category_creation_date datetime NOT NULL,
 category_creator varchar(15) NOT NULL);
 
 create table Reminder(
 reminder_id int(5) primary key,
-reminder_name varchar(30),
+reminder_name varchar(30) NOT NULL,
 reminder_descr varchar(50),
-reminder_type varchar(15),
-reminder_creation_date datetime,
-reminder_creator varchar(15));
+reminder_type varchar(15) NOT NULL,
+reminder_creation_date datetime NOT NULL,
+reminder_creator varchar(15) NOT NULL);
 
 create table NoteCategory(
 notecategory_id int(5) primary key,
-note_id int,
-category_id int);
+note_id int NOT NULL,
+category_id int NOT NULL);
 
 create table NoteReminder(
-notereminder_id int(5),
-note_id int(5),
-reminder_id int(5));
+notereminder_id int(5) primary key,
+note_id int(5) NOT NULL,
+reminder_id int(5) NOT NULL);
 
 create table UserNote(
 usernote_id int(5) primary key,
