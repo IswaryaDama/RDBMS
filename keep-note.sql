@@ -17,7 +17,7 @@ category_id int(5) primary key,
 category_name varchar(30),
 category_descr varchar(50),
 category_creation_date datetime,
-category_creator varchar(15));
+category_creator varchar(15) NOT NULL);
 
 create table Reminder(
 reminder_id int(5) primary key,
