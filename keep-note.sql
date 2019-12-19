@@ -23,7 +23,7 @@ create table Reminder(
 reminder_id int(5) primary key,
 reminder_name varchar(30) NOT NULL,
 reminder_descr varchar(50),
-reminder_type varchar(15) NOT NULL,
+reminder_type varchar(15),
 reminder_creation_date datetime NOT NULL,
 reminder_creator varchar(15) NOT NULL);
 
