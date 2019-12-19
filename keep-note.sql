@@ -3,7 +3,7 @@ user_id varchar(5) primary key,
 user_name varchar(30) NOT NULL,
 user_added_date datetime NOT NULL,
 user_password varchar(15) NOT NULL,
-user_mobile varchar(10) NOT NULL);
+user_mobile varchar(10));
 
 create table Note(
 note_id int(5) primary key,
